@@ -8,7 +8,7 @@ app.post('/double-resolution', async (req, res) => {
   try {
     const inputImage = Buffer.from(req.body.image, 'base64'); 
     sharp(inputImage)
-    .resize({ width: 200, withoutEnlargement: true })
+    .resize({ width: 200})
     .toBuffer((err, data) => {
       if (err) {
         console.error(err);
