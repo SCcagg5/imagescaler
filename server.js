@@ -19,7 +19,6 @@ app.post('/double-resolution', async (req, res) => {
         res.end(data);
       }
     });
-});
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
